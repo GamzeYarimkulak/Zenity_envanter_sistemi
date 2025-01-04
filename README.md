@@ -3,37 +3,37 @@ Envanter Yönetim Sistemi
 Bu proje, Zenity kütüphanesini kullanarak kullanıcı dostu bir arayüz üzerinden çalışan bir Bash betiği olarak tasarlanmıştır. Sistem, kullanıcıların envanter bilgilerini yönetmesine, raporlar almasına ve kullanıcı hesaplarını kontrol etmesine olanak tanır.
 Özellikler
 
-    Kullanıcı Rolleri
-        Yönetici ve Kullanıcı rolleri bulunur.
-        Her rol için farklı yetkilendirme seviyeleri uygulanır.
-    Envanter Yönetimi
-        Ürün ekleme, güncelleme, silme ve listeleme işlemleri.
-        Detaylı arama fonksiyonu.
-    Kullanıcı Yönetimi
-        Yeni kullanıcı ekleme, mevcut kullanıcıları listeleme, güncelleme ve silme.
-        Kilitli hesapların açılması ve şifre sıfırlama.
-    Raporlama
-        Stokta azalan ürünler.
-        En yüksek stok miktarına sahip ürünler.
-    Yedekleme
-        Otomatik ve manuel yedekleme fonksiyonları.
-    Hata Loglama
-        Sistem içerisindeki hatalar log.csv dosyasına kaydedilir.
+        Kullanıcı Rolleri
+            Yönetici ve Kullanıcı rolleri bulunur.
+            Her rol için farklı yetkilendirme seviyeleri uygulanır.
+        Envanter Yönetimi
+            Ürün ekleme, güncelleme, silme ve listeleme işlemleri.
+            Detaylı arama fonksiyonu.
+        Kullanıcı Yönetimi
+            Yeni kullanıcı ekleme, mevcut kullanıcıları listeleme, güncelleme ve silme.
+            Kilitli hesapların açılması ve şifre sıfırlama.
+        Raporlama
+            Stokta azalan ürünler.
+            En yüksek stok miktarına sahip ürünler.
+        Yedekleme
+            Otomatik ve manuel yedekleme fonksiyonları.
+        Hata Loglama
+            Sistem içerisindeki hatalar log.csv dosyasına kaydedilir.
 
 Gereksinimler
 
-    İşletim Sistemi: Linux
-    Zenity: Arayüz desteği için gereklidir.
-    Zenity’i aşağıdaki komutla yükleyebilirsiniz:
+        İşletim Sistemi: Linux
+        Zenity: Arayüz desteği için gereklidir.
+        Zenity’i aşağıdaki komutla yükleyebilirsiniz:
 
-    sudo apt install zenity
+        sudo apt install zenity
 
 Nasıl Kullanılır?
 
-    Betiği çalıştırmadan önce gerekli dosyaları oluşturun:
-
-    chmod +x odev.sh
-    ./odev.sh
+        Betiği çalıştırmadan önce gerekli dosyaları oluşturun:
+    
+        chmod +x odev.sh
+        ./odev.sh
 
     Kullanıcı Girişi
         Sistem, kullanıcı adı ve şifre sorar.
@@ -54,10 +54,10 @@ Kullanıcı Girişi
 Kullanıcı adı ve şifre kontrol edilir. Kilitli hesaplar sistem tarafından engellenir.
 Envanter Yönetimi
 
-    Ekleme: Yeni ürün bilgileri girilir.
-    Listeleme: Tüm envanter CSV formatında görüntülenir.
-    Güncelleme: Belirli bir ürün bilgisi güncellenir.
-    Silme: Ürün kalıcı olarak silinir.
+        Ekleme: Yeni ürün bilgileri girilir.
+        Listeleme: Tüm envanter CSV formatında görüntülenir.
+        Güncelleme: Belirli bir ürün bilgisi güncellenir.
+        Silme: Ürün kalıcı olarak silinir.
 
 Raporlama
 

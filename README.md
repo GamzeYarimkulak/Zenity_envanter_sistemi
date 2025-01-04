@@ -1,0 +1,1 @@
+# Zenity_envanter_sistemi

@@ -1,0 +1,32 @@
+Tarih,Seviye,Mesaj
+Prş 02 Oca 2025 14:31:41 +03,HATA,Kullanıcı girişi: Kullanıcı bulunamadı: Gamze
+Prş 02 Oca 2025 15:18:13 +03,HATA,Hatali sifre girisi: Gamze
+Prş 02 Oca 2025 15:23:48 +03,HATA,Hatali sifre girisi: 
+Prş 02 Oca 2025 15:25:51 +03,HATA,Kullanici bulunamadi: Gamze 
+Prş 02 Oca 2025 16:18:05 +03,HATA,Kullanici bulunamadi: 
+Prş 02 Oca 2025 16:47:35 +03,HATA,Ürün güncelleme hatası: Ürün bulunamadı: 
+Prş 02 Oca 2025 16:54:26 +03,HATA,Ürün güncelleme hatası: Ürün bulunamadı: 
+Prş 02 Oca 2025 16:54:31 +03,HATA,Ürün silme hatası: Ürün bulunamadı: 
+Prş 02 Oca 2025 21:29:23 +03,HATA,Kullanici bulunamadi: dads
+Prş 02 Oca 2025 21:29:31 +03,HATA,Yetkisiz islem denemesi: Urun listele
+Prş 02 Oca 2025 21:31:00 +03,HATA,Kullanici bulunamadi: kadc
+HATA: admin  üç kez başarısız giriş denemesi.
+Cum 03 Oca 2025 00:09:47 +03,HATA,Kullanici bulunamadi: admin
+Cum 03 Oca 2025 00:10:09 +03,HATA,Hatali sifre girisi: Gamze
+Cum 03 Oca 2025 09:24:26 +03,HATA,Kullanici bulunamadi: gamze
+Cum 03 Oca 2025 09:28:12 +03,HATA,Ürün güncelleme hatası: Ürün bulunamadı: 
+Cum 03 Oca 2025 10:08:55 +03,HATA,Hatali sifre girisi: Gamze
+Cum 03 Oca 2025 10:52:40 +03,HATA,Hatali sifre girisi: Gamze
+Cum 03 Oca 2025 12:03:55 +03,HATA,Gecersiz stok veya fiyat girisi: Stok=, Fiyat=
+Cum 03 Oca 2025 12:15:19 +03,HATA,Gecersiz stok veya fiyat girisi: Stok=-5, Fiyat=12
+Cum 03 Oca 2025 12:20:15 +03,HATA,Ayni isimde urun ekleme denemesi: elma
+Cum 03 Oca 2025 13:53:19 +03,HATA,Gecersiz stok veya fiyat girisi: Stok=, Fiyat=
+Cum 03 Oca 2025 13:56:35 +03,HATA,Urun guncelleme hatasi: Urun bulunamadi: kagit
+Cum 03 Oca 2025 15:05:19 +03,HATA,Kullanici bulunamadi: kdaklc
+Cum 03 Oca 2025 15:06:21 +03,HATA,Kullanici bulunamadi: jkwsds
+Cum 03 Oca 2025 15:07:15 +03,HATA,Kullanici bulunamadi: ddkewl
+Cum 03 Oca 2025 15:10:25 +03,HATA,Kullanici bulunamadi: dka
+Cum 03 Oca 2025 15:13:26 +03,HATA,Kullanıcı bulunamadı: dscs
+Cum 03 Oca 2025 15:18:00 +03,HATA,Kullanıcı bulunamadı: dca
+Cum 03 Oca 2025 15:21:37 +03,HATA,Kullanıcı bulunamadı: as
+Cum 03 Oca 2025 16:23:27 +03,HATA,Gecersiz stok veya fiyat girisi: Stok=, Fiyat=

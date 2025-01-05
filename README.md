@@ -147,5 +147,5 @@ Proje videosunda yanıtlanması gereken sorular:
 ---
 
 ## 🔗 GitHub
-Projeye GitHub üzerinden erişim sağlayabilirsiniz: [Proje Linki](https://github.com/kullaniciadi/proje-reposu)
+Projeye GitHub üzerinden erişim sağlayabilirsiniz: (https://github.com/GamzeYarimkulak/Zenity_envanter_sistemi.git)
 

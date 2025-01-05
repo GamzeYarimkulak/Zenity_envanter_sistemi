@@ -120,6 +120,10 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 - Ürün adı alınır ve dosyadan silinir.
 - Silme işlemi onay penceresi ile kontrol edilir.
 
+### **Gelişmiş Arama**
+- Ürün adı alınır ve dosyada aranır.
+- Csv dosyasından aranan ürünün bilgileri okunur.
+
 ---
 
 ## 🕵️ Kullanıcı Yönetimi
@@ -177,7 +181,7 @@ Proje videosunda yanıtlanması gereken sorular:
 
 ---
 ### **Youtube linki**
-Proje anlatımına youtube üzerinden erişim sağlayabilirsiniz: (
+Proje anlatımına youtube üzerinden erişim sağlayabilirsiniz: (https://youtu.be/FABoW_5xQEM?si=_xPjaU5sBPEiyt5e)
 
 ---
 

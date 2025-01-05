@@ -2,23 +2,12 @@ Envanter Yönetim Sistemi
 
 Bu proje, Zenity kütüphanesini kullanarak kullanıcı dostu bir arayüz üzerinden çalışan bir Bash betiği olarak tasarlanmıştır. Sistem, kullanıcıların envanter bilgilerini yönetmesine, raporlar almasına ve kullanıcı hesaplarını kontrol etmesine olanak tanır.
 Özellikler
+        1.Kullanıcı Rolleri:
+          Yönetici ve kullanıcı rolleri bulunur.
+          Her rol için farklı yetkilendirme seviyeleri uygulanır
 
-        Kullanıcı Rolleri
-            Yönetici ve Kullanıcı rolleri bulunur.
-            Her rol için farklı yetkilendirme seviyeleri uygulanır.
-        Envanter Yönetimi
-            Ürün ekleme, güncelleme, silme ve listeleme işlemleri.
-            Detaylı arama fonksiyonu.
-        Kullanıcı Yönetimi
-            Yeni kullanıcı ekleme, mevcut kullanıcıları listeleme, güncelleme ve silme.
-            Kilitli hesapların açılması ve şifre sıfırlama.
-        Raporlama
-            Stokta azalan ürünler.
-            En yüksek stok miktarına sahip ürünler.
-        Yedekleme
-            Otomatik ve manuel yedekleme fonksiyonları.
-        Hata Loglama
-            Sistem içerisindeki hatalar log.csv dosyasına kaydedilir.
+       
+        
 
 Gereksinimler
 

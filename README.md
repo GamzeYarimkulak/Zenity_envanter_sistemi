@@ -53,7 +53,7 @@ Projenin ana betiğini çalıştırmak için:
 - Hesap kilitlenirse, sadece yönetici tarafından açılabilir.
 
   
-  ![WhatsApp Image 2025-01-05 at 20 51 12](https://github.com/user-attachments/assets/3eba262e-dbc9-4f1f-a71f-55dbaf8989de)
+![WhatsApp Image 2025-01-05 at 20 51 12](https://github.com/user-attachments/assets/3eba262e-dbc9-4f1f-a71f-55dbaf8989de)
 
 
 
@@ -72,9 +72,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
   - Stok raporlarını alma.
  
     
- ![WhatsApp Image 2025-01-05 at 20 51 13 (1)](https://github.com/user-attachments/assets/615ed73c-53aa-4ccc-b406-5550477b36d0)
  
-
 ![WhatsApp Image 2025-01-05 at 20 51 14 (1)](https://github.com/user-attachments/assets/e7460a1b-aab0-4241-97ae-5df8aebae266)
 
 
@@ -83,7 +81,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
   - Yeni kullanıcı ekleme, bilgileri güncelleme ve silme.
     
  
-  ![WhatsApp Image 2025-01-05 at 20 51 14 (3)](https://github.com/user-attachments/assets/405980e3-d820-4b3c-acf8-40eb8d19fc59)
+![WhatsApp Image 2025-01-05 at 20 51 14 (3)](https://github.com/user-attachments/assets/405980e3-d820-4b3c-acf8-40eb8d19fc59)
 
   
 - 🔋 **Program Yönetimi:**

@@ -1,4 +1,4 @@
-# Zenity ile Basit Envanter ve Kullanıcı Yönetim Sistemi
+# Zenity ile Envanter ve Kullanıcı Yönetim Sistemi
 
 Bu proje, **Zenity** aracıyla grafiksel bir arayüz sunarak bir envanter ve kullanıcı yönetim sistemi geliştirme amacı taşımaktadır. Sistem, **yönetici** ve **kullanıcı** rollerine göre farklı yetkiler tanır ve çeşitli işlevler sunar. Aşağıda sistemin kurulumu, kullanımı ve fonksiyonları detaylı bir şekilde açıklanmıştır.
 

@@ -60,11 +60,20 @@ Projenin ana betiğini çalıştırmak için:
 ### **2. Ana Menü**
 Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
+
+![WhatsApp Image 2025-01-05 at 20 51 13 (1)](https://github.com/user-attachments/assets/615ed73c-53aa-4ccc-b406-5550477b36d0)
+ 
+
 #### **Yönetici Menüsü**:
 - 🌐 **Envanter Yönetimi:**
   - Ürün ekleme, güncelleme, silme ve listeleme.
   - Gelişmiş arama.
   - Stok raporlarını alma.
+ 
+ ![WhatsApp Image 2025-01-05 at 20 51 13](https://github.com/user-attachments/assets/af837ee6-31ae-48e5-909b-b6721eac87cf)
+
+
+ 
 - 🔧 **Kullanıcı Yönetimi:**
   - Yeni kullanıcı ekleme, bilgileri güncelleme ve silme.
 - 🔋 **Program Yönetimi:**

@@ -49,9 +49,9 @@ Projenin ana betiğini çalıştırmak için:
 
 ### **1. Kullanıcı Girişi**
 - **Yönetici** veya **Kullanıcı** olarak giriş yapabilirsiniz.
-  
 - 3 hatalı girişten sonra hesap kilitlenir.
 - Hesap kilitlenirse, sadece yönetici tarafından açılabilir.
+  ![WhatsApp Image 2025-01-05 at 20 51 12](https://github.com/user-attachments/assets/3eba262e-dbc9-4f1f-a71f-55dbaf8989de)
 
 ### **2. Ana Menü**
 Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:

@@ -61,7 +61,8 @@ Projenin ana betiğini çalıştırmak için:
 Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 
-![WhatsApp Image 2025-01-05 at 20 51 13 (1)](https://github.com/user-attachments/assets/615ed73c-53aa-4ccc-b406-5550477b36d0)
+![WhatsApp Image 2025-01-05 at 20 51 13](https://github.com/user-attachments/assets/af837ee6-31ae-48e5-909b-b6721eac87cf)
+
  
 
 #### **Yönetici Menüsü**:
@@ -70,14 +71,28 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
   - Gelişmiş arama.
   - Stok raporlarını alma.
  
- ![WhatsApp Image 2025-01-05 at 20 51 13](https://github.com/user-attachments/assets/af837ee6-31ae-48e5-909b-b6721eac87cf)
-
-
+    
+ ![WhatsApp Image 2025-01-05 at 20 51 13 (1)](https://github.com/user-attachments/assets/615ed73c-53aa-4ccc-b406-5550477b36d0)
  
+
+![WhatsApp Image 2025-01-05 at 20 51 14 (1)](https://github.com/user-attachments/assets/e7460a1b-aab0-4241-97ae-5df8aebae266)
+
+
+
 - 🔧 **Kullanıcı Yönetimi:**
   - Yeni kullanıcı ekleme, bilgileri güncelleme ve silme.
+    
+ 
+  ![WhatsApp Image 2025-01-05 at 20 51 14 (3)](https://github.com/user-attachments/assets/405980e3-d820-4b3c-acf8-40eb8d19fc59)
+
+  
 - 🔋 **Program Yönetimi:**
   - Disk alanını kontrol etme, dosyaları yedekleme ve hata kayıtlarını inceleme.
+ 
+ 
+![WhatsApp Image 2025-01-05 at 20 51 14 (4)](https://github.com/user-attachments/assets/71523f8d-287d-4407-b89b-39f37fffffaf)
+
+
 
 #### **Kullanıcı Menüsü**:
 - Ürün listeleme.

@@ -308,29 +308,35 @@ function urun_guncelle() {
 
 # Urun silme fonksiyonu
 # Kullanici tarafindan belirtilen urunu envanterden siler
+ 
 function urun_sil() {
     # Kullanici silmek istedigi urunun adini girer
     local Ad=$(zenity --entry --title="Urun Sil" --text="Silmek istediginiz urun adini girin:" --width=400)
-
-    # Urunun varligi kontrol edilir
-    if [[ -z "$Ad" || ! $(grep -E "^$Ad," envanter.csv) ]]; then
-        zenity --error --text="Gecerli bir urun adini girin!"
+    
+    # Kullanici iptal ettiyse veya bos girdi yaptiysa
+    if [[ -z "$Ad" ]]; then
+        zenity --error --text="Urun adi bos olamaz!"
         return
     fi
-
+    
+    # Urunun varligi kontrol edilir (ikinci sütunda arama yapar)
+    if ! grep -i ",[[:space:]]*$Ad," envanter.csv > /dev/null; then
+        zenity --error --text="Urun bulunamadi: $Ad"
+        return
+    fi
+    
     # Silinecek urunun detaylari gosterilir ve onay istenir
-    local urun_detay=$(grep -E "^$Ad," envanter.csv)
+    local urun_detay=$(grep -i ",[[:space:]]*$Ad," envanter.csv)
     zenity --question --text="Bu urunu silmek istediginizden emin misiniz?\n\n$urun_detay" --width=400
     if [[ $? -eq 0 ]]; then
         # Kullanici onaylarsa urun silinir
-        sed -i "/^$Ad,/d" envanter.csv
+        sed -i "/$Ad,/Id" envanter.csv
         zenity --info --text="Urun basariyla silindi."
     else
         # Kullanici iptal ederse islem sonlandirilir
         zenity --info --text="Urun silme islemi iptal edildi."
     fi
 }
-
 # Rapor alma fonksiyonu
 # Kullaniciya farkli rapor turleri sunar
 function rapor_al() {
@@ -352,60 +358,71 @@ function rapor_al() {
 }
 
 # Stokta azalan urunler raporu
-# Belirtilen stok esigine gore urunleri listeler
+# Stokta azalan urunler raporu
 function stokta_azalan_urunler() {
-    # Kullaniciya stok esigi sorulur
     esik_degeri=$(zenity --entry --title="Esik Degeri Belirle" --text="Lutfen stok esigini girin:" --width=400)
-
-    # Stok esiginin sayisal olup olmadigi kontrol edilir
+    
     if [[ ! "$esik_degeri" =~ ^[0-9]+$ ]]; then
         zenity --error --text="Esik degeri gecerli bir pozitif sayi olmalidir."
         return
     fi
 
-    # Esigin altinda olan urunler filtrelenir
     filtered=$(awk -v esik="$esik_degeri" -F',' 'NR>1 && $3 < esik {print}' envanter.csv)
-
-    # Esigin altinda urun yoksa bilgi mesaji gosterilir
+    
     if [[ -z "$filtered" ]]; then
         zenity --info --text="Esik degerinin altinda urun bulunmamaktadir."
         return
     fi
 
-    # Rapor dosyasi olusturulur ve urunler yazilir
+    # Geçici bir dosya oluştur ve başlığı ekle
+    temp_file=$(mktemp)
+    echo "ID    Ad    Stok    Fiyat    Kategori" > "$temp_file"
+    echo "-----------------------------------------" >> "$temp_file"
+    echo "$filtered" | column -t -s',' >> "$temp_file"
+
+    # Sonuçları text-info ile göster
+    zenity --text-info \
+        --title="Stokta Azalan Urunler (Esik: $esik_degeri)" \
+        --filename="$temp_file" \
+        --width=800 --height=400
+
+    # Geçici dosyayı sil
+    rm "$temp_file"
+
+    # Raporu CSV olarak kaydet
     echo "ID,Ad,Stok,Fiyat,Kategori" > stokta_azalanlar.csv
     echo "$filtered" >> stokta_azalanlar.csv
-
-    # Sonuclar listelenir
-    echo -e "$filtered" | awk -F',' '{print $1 "|" $2 "|" $3 "|" $4 "|" $5}' | zenity --list --title="Stokta Azalan Urunler" \
-        --column="ID" --column="Ad" --column="Stok" --column="Fiyat" --column="Kategori" \
-        --width=600 --height=400 --separator="|"
 }
 
 # En yüksek stok miktarına sahip ürünleri listeleme fonksiyonu
 function en_yuksek_stok_urunler() {
-    # Envanterdeki en yüksek stok miktarını belirler
     max_stok=$(awk -F',' 'NR>1 {if($3 > max) max=$3} END {print max}' envanter.csv)
-
-    # En yüksek stok miktarına sahip ürünleri filtreler
     filtered=$(awk -F',' -v max="$max_stok" 'NR>1 && $3 == max {print}' envanter.csv)
-
-    # Eğer sonuç yoksa bilgi mesajı gösterilir
+    
     if [[ -z "$filtered" ]]; then
         zenity --info --text="En yuksek stok miktarina sahip urun bulunamadi!"
         return
     fi
 
-    # En yüksek stok miktarına sahip ürünleri içeren bir dosya oluşturulur
+    # Geçici bir dosya oluştur ve başlığı ekle
+    temp_file=$(mktemp)
+    echo "ID    Ad    Stok    Fiyat    Kategori" > "$temp_file"
+    echo "-----------------------------------------" >> "$temp_file"
+    echo "$filtered" | column -t -s',' >> "$temp_file"
+
+    # Sonuçları text-info ile göster
+    zenity --text-info \
+        --title="En Yuksek Stoklu Urunler (Stok: $max_stok)" \
+        --filename="$temp_file" \
+        --width=800 --height=400
+
+    # Geçici dosyayı sil
+    rm "$temp_file"
+
+    # Raporu CSV olarak kaydet
     echo "ID,Ad,Stok,Fiyat,Kategori" > en_yuksek_stok.csv
     echo "$filtered" >> en_yuksek_stok.csv
-
-    # Sonuçlar bir liste şeklinde gösterilir
-    zenity --list --title="En Yuksek Stok Miktarina Sahip Urunler" \
-        --column="ID" --column="Ad" --column="Stok" --column="Fiyat" --column="Kategori" \
-        --width=600 --height=400 --separator="|" <<< "$(echo "$filtered" | tr ',' '|')"
 }
-
 # Kullanıcı yönetimi başlangıcı
 # Eğer kullanıcı dosyası yoksa bir başlık satırı ekleyerek oluşturulur
 if [ ! -f kullanicilar.csv ]; then
@@ -496,24 +513,28 @@ function yeni_kullanici_ekle() {
 
 # Kullanıcıları listeleme fonksiyonu
 # Kullanıcı dosyasındaki mevcut tüm kullanıcıları listeler
+# Kullanicilar.csv dosyasındaki tüm kullanıcıları listeler
+# Tüm kullanicilari listeler
 function kullanicilari_listele() {
-    # Kullanıcı dosyasından bilgiler alınır
-    kullanicilar=$(tail -n +2 kullanicilar.csv)
+   # Önce dosyanın varlığını kontrol edelim
+   if [[ ! -f kullanicilar.csv ]]; then
+       zenity --error --text="Kullanicilar dosyasi bulunamadi!"
+       return
+   fi
 
-    # Eğer dosyada kullanıcı yoksa bilgi mesajı gösterilir
-    if [[ -z "$kullanicilar" ]]; then
-        zenity --info --text="Kayitli kullanici bulunmamaktadir."
-    else
-        # Kullanıcı bilgileri formatlanır ve metin penceresinde gösterilir
-        list_data="ID,Ad,Soyad,Rol,Sifre\n"
-        while IFS=, read -r id ad soyad rol sifre; do
-            list_data+="$id,$ad,$soyad,$rol,$sifre\n"
-        done <<< "$kullanicilar"
+   # Dosya içeriğini değişkene atalım
+   KULLANICILAR=$(cat kullanicilar.csv)
 
-        echo -e "$list_data" | zenity --text-info --title="Kullanici Listesi" --width=600 --height=400
-    fi
+   # İçerik boş değilse gösterelim
+   if [[ ! -z "$KULLANICILAR" ]]; then
+       echo "$KULLANICILAR" | column -t -s ',' | zenity --text-info \
+           --title="Kullanici Listesi" \
+           --width=600 \
+           --height=400
+   else
+       zenity --info --text="Kayitli kullanici bulunmamaktadir."
+   fi
 }
-
 # Kullanici Guncelle fonksiyonu
 # Bu fonksiyon, mevcut bir kullanıcının bilgilerini güncellemek için kullanılır.
 function kullanici_guncelle() {

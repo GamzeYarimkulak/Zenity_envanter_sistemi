@@ -142,8 +142,7 @@ Proje videosunda yanıtlanması gereken sorular:
 
 ---
 
-## ✍ Yazarlar
-Bu proje, **[isim ekleyin]** tarafından geliştirilmiştir.
+ 
 
 ---
 

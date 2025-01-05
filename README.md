@@ -49,6 +49,7 @@ Projenin ana betiğini çalıştırmak için:
 
 ### **1. Kullanıcı Girişi**
 - **Yönetici** veya **Kullanıcı** olarak giriş yapabilirsiniz.
+  
 - 3 hatalı girişten sonra hesap kilitlenir.
 - Hesap kilitlenirse, sadece yönetici tarafından açılabilir.
 
@@ -58,6 +59,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 #### **Yönetici Menüsü**:
 - 🌐 **Envanter Yönetimi:**
   - Ürün ekleme, güncelleme, silme ve listeleme.
+  - Gelişmiş arama.
   - Stok raporlarını alma.
 - 🔧 **Kullanıcı Yönetimi:**
   - Yeni kullanıcı ekleme, bilgileri güncelleme ve silme.
@@ -66,6 +68,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 #### **Kullanıcı Menüsü**:
 - Ürün listeleme.
+- Gelişmiş arama.
 - Stok raporlarını alma.
 
 ---
@@ -131,18 +134,24 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 ---
 
+
 ## ✅ Değerlendirme Soruları
 
 Proje videosunda yanıtlanması gereken sorular:
 1. Proje sırasında karşılaştığınız en büyük teknik sorun neydi ve nasıl çözdünüz?
+-  Karşılaştığım en büyük teknik sorun csv dosyalarının doğru yönetilmesi konusuydu. Dosyalara yazma/okuma kısımlarında dosyay erişilme kısmında hatalar meydana geliyordu. Bunlar için her kritik işlem öncesi dosya varlığı ve erişim kontroller yaptım.
 2. Zenity kullanırken sizi en çok zorlayan kısım hangisiydi?
+-  Form bilgilerinin | (pipe) karakteri ile ayrılması ve cut komutu ile parse edilmesi kısmında zorlandım.
 3. Bir hatayla karşılaştığınızda bunu çözmek için hangi adımları izlediniz?
+-  Öncelikle hatalar log.error() fonksiyonu ile log.csv dosyasına kaydediliyor. Dosyayı kontrol edip hatanın ne olduğunu tespit ettikten sonra çözüm aşamalarına geçtim.
 4. Ürün güncelleme fonksiyonunu geliştirirken, aynı adı tasıyan ancak farklı kategorilerde olan ürünlerle nasıl başa çıktınız?
+-  Ürün güncellenirken sadece ad değil kategori bilgisi de alınıyor ve güncelleme sırasında eski kayıt tamamen siliniyor ardından yeni bilgilerle tekrar ekleniyor.
 5. Kullanıcı programı beklenmedik şekilde kapatırsa veri kaybını önlemek için ne yaptınız?
+-  Otomatik yedekleme fonksiyonu ile düzenli yedekleme yapılıyor. Her kritik işlem sonrası dosyalara flush yapılıyor.
 
 ---
-
- 
+### **Youtube linki**
+Proje anlatımına youtube üzerinden erişim sağlayabilirsiniz: (
 
 ---
 

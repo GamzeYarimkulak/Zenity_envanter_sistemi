@@ -157,5 +157,4 @@ Proje anlatımına youtube üzerinden erişim sağlayabilirsiniz: (
 
 ## 🔗 GitHub
 Projeye GitHub üzerinden erişim sağlayabilirsiniz: (https://github.com/GamzeYarimkulak/Zenity_envanter_sistemi.git)
-![_3c09eaad-51db-42dc-9522-8420a288ba2e](https://github.com/user-attachments/assets/4c053423-6600-493d-af9f-dd7b4c8e9479)
 

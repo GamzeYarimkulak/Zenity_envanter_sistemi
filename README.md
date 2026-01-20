@@ -4,7 +4,7 @@ Bu proje, **Zenity** aracıyla grafiksel bir arayüz sunarak bir envanter ve kul
 
 ---
 
-## 🔧 Kurulum
+##  Kurulum
 
 Bu projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
@@ -37,7 +37,7 @@ chmod +x odev.sh
 
 ---
 
-## ⚡ Çalıştırma
+##  Çalıştırma
 
 Projenin ana betiğini çalıştırmak için:
 ```bash
@@ -45,7 +45,7 @@ Projenin ana betiğini çalıştırmak için:
 ```
 ---
 
-## 🔄 Sistem Fonksiyonları
+##  Sistem Fonksiyonları
 
 ### **1. Kullanıcı Girişi**
 - **Yönetici** veya **Kullanıcı** olarak giriş yapabilirsiniz.
@@ -66,7 +66,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
  
 
 #### **Yönetici Menüsü**:
-- 🌐 **Envanter Yönetimi:**
+-  **Envanter Yönetimi:**
   - Ürün ekleme, güncelleme, silme ve listeleme.
   - Gelişmiş arama.
   - Stok raporlarını alma.
@@ -77,14 +77,14 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 
 
-- 🔧 **Kullanıcı Yönetimi:**
+-  **Kullanıcı Yönetimi:**
   - Yeni kullanıcı ekleme, bilgileri güncelleme ve silme.
     
  
 ![WhatsApp Image 2025-01-05 at 20 51 14 (3)](https://github.com/user-attachments/assets/405980e3-d820-4b3c-acf8-40eb8d19fc59)
 
   
-- 🔋 **Program Yönetimi:**
+-  **Program Yönetimi:**
   - Disk alanını kontrol etme, dosyaları yedekleme ve hata kayıtlarını inceleme.
  
  
@@ -99,7 +99,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 ---
 
-## 🔖 Envanter Fonksiyonları
+##  Envanter Fonksiyonları
 
 ### **Ürün Ekleme**
 - Zenity formuyla yeni bir ürün eklenir.
@@ -126,7 +126,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 ---
 
-## 🕵️ Kullanıcı Yönetimi
+##  Kullanıcı Yönetimi
 
 ### **Kullanıcı Listeleme**
 - Sistemde kayıtlı tüm kullanıcılar Zenity aracıyla listelenir.
@@ -140,7 +140,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 ---
 
-## 📊 Raporlama
+##  Raporlama
 
 ### **Stokta Azalan Ürünler**
 - Kullanıcıdan bir stok eşik değeri istenir.
@@ -151,7 +151,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 
 ---
 
-## 🔋 Program Yönetimi
+##  Program Yönetimi
 
 ### **Disk Alanı Kontrolü**
 - Sistemdeki tüm dosyaların boyutları hesaplanır ve toplam alan bilgisi görülür.
@@ -165,7 +165,7 @@ Ana menü, kullanıcının rolüne göre farklı seçenekler sunar:
 ---
 
 
-## ✅ Değerlendirme Soruları
+##  Değerlendirme Soruları
 
 Proje videosunda yanıtlanması gereken sorular:
 1. Proje sırasında karşılaştığınız en büyük teknik sorun neydi ve nasıl çözdünüz?
